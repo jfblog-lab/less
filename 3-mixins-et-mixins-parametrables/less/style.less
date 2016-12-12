@@ -1,0 +1,51 @@
+// variables
+@font: 14px;
+
+// Mixins
+.boutonForm(){
+	margin-right: 10px;
+	font-size : @font;
+	display: inline;
+	padding: 2px 5px;
+	color: white;
+}
+
+.boutonColor(@color: black, @hshadow: 2px, @vshadow: 2px, @blur: 5px){
+	background : @color;
+	-moz-box-shadow: @hshadow @vshadow @blur @color;
+	-webkit-box-shadow: @hshadow @vshadow @blur @color;
+	-o-box-shadow: @hshadow @vshadow @blur @color;
+	box-shadow: @hshadow @vshadow @blur @color;
+}
+
+// CSS
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+}
+
+#message{
+	width: 600px;
+	margin: 50px auto;
+	h1{
+		font-size: @font + 4pt;
+		height: 50px;
+	}
+	p.green{
+		.boutonForm;
+		.boutonColor(green, 2px, 2px, 5px);
+	}
+	p.orange{
+		.boutonForm;
+		.boutonColor(orange, 2px, 2px, 5px);
+	}
+	p.red{
+		.boutonForm;
+		.boutonColor(red, 2px, 2px, 5px);
+	}
+}

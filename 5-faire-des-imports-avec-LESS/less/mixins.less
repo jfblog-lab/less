@@ -1,0 +1,16 @@
+// Mixins
+.boutonForm(){
+	margin-right: 10px;
+	font-size : @font;
+	display: inline;
+	padding: 2px 5px;
+	color: colorBg;
+}
+
+.boutonColor(@color: black, @hshadow: 2px, @vshadow: 2px, @blur: 5px){
+	background : fadeout(@color, 50%);
+	-moz-box-shadow: @hshadow @vshadow @blur average(@color, @colorBg);
+	-webkit-box-shadow: @hshadow @vshadow @blur average(@color, @colorBg);
+	-o-box-shadow: @hshadow @vshadow @blur average(@color, @colorBg);
+	box-shadow: @hshadow @vshadow @blur average(@color, @colorBg);
+}

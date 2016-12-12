@@ -1,0 +1,19 @@
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#test {
+  background: #888;
+  width: 600px;
+  margin: 0 auto;
+}
+#test h1 {
+  font-size: 18pt;
+}
+#test p {
+  font-size: 14pt;
+}
+#test .maclass {
+  color: red;
+}
